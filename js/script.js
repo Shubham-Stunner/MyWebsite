@@ -12,7 +12,16 @@ sidebar_navigation_bottom.addEventListener('click', function () {
         document.getElementById('sidebar_menu_icon').classList.remove('fa-close');
     }
 })
-
+document.getElementById('readMoreLink').addEventListener('click', function() {
+    var hiddenContent = document.getElementById('hiddenContent');
+    if (hiddenContent.style.display === 'none') {
+      hiddenContent.style.display = 'block';
+      this.textContent = 'Read less';
+    } else {
+      hiddenContent.style.display = 'none';
+      this.textContent = 'Read more';
+    }
+  });
 
 let global_menu_buttom = document.getElementById('global_menu_button')
 let global_navigation = document.getElementById('global_menu_items')
